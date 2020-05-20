@@ -37,7 +37,7 @@ namespace VirtualTimeCore
             Set(hours, minutes, seconds);
         }
 
-        public void Set(int hours, int minutes = 0, float seconds = 0)
+        private void Set(int hours, int minutes = 0, float seconds = 0)
         {
             _time = hours * SECONDS_IN_HOUR + minutes * SECONDS_IN_MINUTE + seconds;
         }

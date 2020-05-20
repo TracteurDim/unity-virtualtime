@@ -20,7 +20,17 @@ namespace Tests
             Assert.AreEqual(1, vt3.TotalSeconds);
             Assert.AreEqual(0, vt4.TotalSeconds);
             Assert.AreEqual(3723, vt5.TotalSeconds);
+        }
 
+        [Test]
+        public void GetHoursMinutesSeconds_DifferentsHoursMinutes_returnsCorrectHoursMinutesSeconds()
+        {
+            VirtualTime vt1 = new VirtualTime(2, 40, 20.0f);
+
+            // Asserts
+            Assert.AreEqual(2, vt1.Hours);
+            Assert.AreEqual(40, vt1.Minutes);
+            Assert.AreEqual(20.0f, vt1.Seconds);
         }
     }
 }
